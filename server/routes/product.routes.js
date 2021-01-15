@@ -4,5 +4,8 @@ module.exports = function(app){
     app.post('/api/product', ProductController.createProduct);
     app.get('/api/readAll', ProductController.readAll);
     app.get('/api/readOne/:id', ProductController.readOne);
+    app.delete('/api/product/:id', ProductController.deleteProduct);
+    app.put('/api/edit/:id', ProductController.updateProduct)
+
 
 }
