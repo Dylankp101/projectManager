@@ -3,4 +3,6 @@ module.exports = function(app){
     app.get('/api', ProductController.index);
     app.post('/api/product', ProductController.createProduct);
     app.get('/api/readAll', ProductController.readAll);
+    app.get('/api/readOne/:id', ProductController.readOne);
+
 }

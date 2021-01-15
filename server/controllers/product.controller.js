@@ -22,3 +22,9 @@ module.exports.readAll = (request, response) => {
     .catch(error => response.json(error));
 }
 
+module.exports.readOne = (request, response) => {
+    Product.findOne({_id:request.params.id})
+    .then(data => response.json(data))
+    .catch(error => response.json(error));
+}
+
